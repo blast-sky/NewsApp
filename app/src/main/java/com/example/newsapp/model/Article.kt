@@ -1,8 +1,9 @@
 package com.example.newsapp.model
 
-data class NewsApiResponse(
-    val status: String,
-    val totalResults: Long,
+import java.io.Serializable
+import java.util.*
+
+data class Articles(
     val articles: List<Article>
 )
 
@@ -13,9 +14,9 @@ data class Article (
     val description: String? = null,
     val url: String,
     val urlToImage: String? = null,
-    val publishedAt: String,
+    val publishedAt: Date,
     val content: String? = null
-)
+) : Serializable
 
 data class Source (
     val id: String? = null,

@@ -9,14 +9,50 @@
         android:id="@+id/dailyNewsFragment"
         android:name="com.example.newsapp.DailyNewsFragment"
         android:label="Daily News"
-        tools:layout="@layout/fragment_daily_news" />
+        tools:layout="@layout/fragment_daily_news" >
+        <action
+            android:id="@+id/action_dailyNewsFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+        <action
+            android:id="@+id/action_dailyNewsFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
     <fragment
         android:id="@+id/bookmarksFragment"
         android:name="com.example.newsapp.BookmarksFragment"
         android:label="Bookmarks"
-        tools:layout="@layout/fragment_bookmarks" />
+        tools:layout="@layout/fragment_bookmarks" >
+        <action
+            android:id="@+id/action_bookmarksFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.newsapp.SettingsFragment"
         android:label="Settings" />
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.example.newsapp.ArticleFragment"
+        android:label=" "
+        tools:layout="@layout/fragment_article">
+        <argument
+            android:name="article"
+            app:argType="com.example.newsapp.model.Article" />
+        <action
+            android:id="@+id/action_articleFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.example.newsapp.WebViewFragment"
+        android:label="fragment_web_view"
+        tools:layout="@layout/fragment_web_view" >
+        <argument android:name="url"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.newsapp.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
 </navigation>

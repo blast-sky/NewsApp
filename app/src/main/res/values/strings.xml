@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">NewsApp</string>
 
+    <string name="without_author">"Без автора"</string>
+
     <string name="daily_news_label">"Daily News"</string>
     <string name="settings_label">"Settings"</string>
     <string name="bookmarks_label">"Bookmarks"</string>
@@ -18,5 +20,6 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="search">Search</string>
 
 </resources>
