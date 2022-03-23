@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ArticleFragment">
+    tools:context=".ui.fragments.ArticleFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,11 +15,25 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:contentDescription="@string/add_to_bookmarks"
+                android:src="@drawable/ic_bookmarks"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:tint="@android:color/white"
+                app:layout_constraintTop_toBottomOf="@id/articleDescription"
+                app:backgroundTint="@color/pink" />
+
             <ImageView
                 android:id="@+id/articleImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
+                android:scaleType="fitXY"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -32,11 +46,12 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
+                android:maxLines="1"
+                app:layout_constrainedWidth="true"
                 app:layout_constraintEnd_toStartOf="@id/articleData"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintHorizontal_chainStyle="packed"
                 app:layout_constraintStart_toStartOf="parent"
-
                 app:layout_constraintTop_toBottomOf="@id/articleImage"
                 tools:text="Author" />
 
@@ -45,6 +60,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
+                app:layout_constrainedWidth="true"
                 app:layout_constraintBottom_toBottomOf="@id/articleAuthor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/articleAuthor"
@@ -54,15 +70,16 @@
             <TextView
                 android:id="@+id/articleTitle"
                 android:layout_width="wrap_content"
+
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
+                android:visibility="gone"
+                app:layout_constrainedWidth="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/articleAuthor"
-                tools:text="Title" />
+                tools:text="@tools:sample/lorem/random" />
 
             <TextView
                 android:id="@+id/articleDescription"
@@ -90,12 +107,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="Read on site..."
+                android:text="@string/read_on_site"
                 android:textColor="@android:color/holo_blue_light"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/articleDescription"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/articleDescription" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

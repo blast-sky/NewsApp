@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BookmarksFragment">
+    tools:context=".ui.fragments.BookmarksFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/bookmarksRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/daily_news_latest_news_item" />
+        tools:listitem="@layout/vertical_news_item" />
 </FrameLayout>

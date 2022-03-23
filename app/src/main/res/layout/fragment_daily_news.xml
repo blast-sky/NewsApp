@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DailyNewsFragment">
+    tools:context=".ui.fragments.DailyNewsFragment">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeLayout"
@@ -31,13 +31,8 @@
 
                     <TextView
                         android:id="@+id/topStoriesLabel"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginStart="10dp"
-                        android:text="Top stories"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
+                        style="@style/DailyHeaderLabelStyle"
+                        android:text="@string/top_stories"
                         app:layout_constraintBottom_toTopOf="@id/topStoriesRecyclerView"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -46,6 +41,7 @@
                         android:id="@+id/topStoriesRecyclerView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:minHeight="100dp"
                         android:orientation="horizontal"
                         android:paddingTop="5dp"
                         android:paddingBottom="5dp"
@@ -54,17 +50,12 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/topStoriesLabel"
                         tools:itemCount="1"
-                        tools:listitem="@layout/daily_news_top_stories_item" />
+                        tools:listitem="@layout/horizontal_news_item" />
 
                     <TextView
                         android:id="@+id/latestItNewsLabel"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginStart="10dp"
-                        android:text="Latest it news"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
+                        style="@style/DailyHeaderLabelStyle"
+                        android:text="@string/latest_it_news"
                         app:layout_constraintBottom_toTopOf="@id/latestItNewsRecyclerView"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/topStoriesRecyclerView" />
@@ -74,6 +65,7 @@
                         android:id="@+id/latestItNewsRecyclerView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:minHeight="100dp"
                         android:orientation="horizontal"
                         android:paddingTop="5dp"
                         android:paddingBottom="5dp"
@@ -82,17 +74,12 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/latestItNewsLabel"
                         tools:itemCount="1"
-                        tools:listitem="@layout/daily_news_top_stories_item" />
+                        tools:listitem="@layout/horizontal_news_item" />
 
                     <TextView
                         android:id="@+id/latestBitcoinNewsLabel"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginStart="10dp"
-                        android:text="Latest bitcoin news"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
+                        style="@style/DailyHeaderLabelStyle"
+                        android:text="@string/latest_bitcoin_news"
                         app:layout_constraintBottom_toTopOf="@id/latestBitcoinNewsRecyclerView"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/latestItNewsRecyclerView" />
@@ -101,6 +88,7 @@
                         android:id="@+id/latestBitcoinNewsRecyclerView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:minHeight="100dp"
                         android:orientation="horizontal"
                         android:paddingTop="5dp"
                         android:paddingBottom="5dp"
@@ -109,7 +97,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/latestBitcoinNewsLabel"
                         tools:itemCount="1"
-                        tools:listitem="@layout/daily_news_top_stories_item" />
+                        tools:listitem="@layout/horizontal_news_item" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -120,7 +108,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:visibility="gone"
-                    tools:listitem="@layout/daily_news_latest_news_item" />
+                    tools:listitem="@layout/vertical_news_item" />
             </LinearLayout>
 
         </androidx.core.widget.NestedScrollView>

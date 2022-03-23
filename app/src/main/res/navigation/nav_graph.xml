@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/dailyNewsFragment"
-        android:name="com.example.newsapp.DailyNewsFragment"
+        android:name="com.example.newsapp.ui.fragments.DailyNewsFragment"
         android:label="Daily News"
         tools:layout="@layout/fragment_daily_news" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/bookmarksFragment"
-        android:name="com.example.newsapp.BookmarksFragment"
+        android:name="com.example.newsapp.ui.fragments.BookmarksFragment"
         android:label="Bookmarks"
         tools:layout="@layout/fragment_bookmarks" >
         <action
@@ -28,11 +28,11 @@
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.example.newsapp.SettingsFragment"
+        android:name="com.example.newsapp.ui.fragments.SettingsFragment"
         android:label="Settings" />
     <fragment
         android:id="@+id/articleFragment"
-        android:name="com.example.newsapp.ArticleFragment"
+        android:name="com.example.newsapp.ui.fragments.ArticleFragment"
         android:label=" "
         tools:layout="@layout/fragment_article">
         <argument
@@ -41,18 +41,32 @@
         <action
             android:id="@+id/action_articleFragment_to_webViewFragment"
             app:destination="@id/webViewFragment" />
+        <argument
+            android:name="fromFragment"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/webViewFragment"
-        android:name="com.example.newsapp.WebViewFragment"
-        android:label="fragment_web_view"
-        tools:layout="@layout/fragment_web_view" >
-        <argument android:name="url"
+        android:name="com.example.newsapp.ui.fragments.WebViewFragment"
+        android:label="WebView"
+        tools:layout="@layout/fragment_web_view">
+        <argument
+            android:name="url"
+            app:argType="string" />
+        <argument
+            android:name="fromFragment"
             app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.example.newsapp.SearchFragment"
-        android:label="fragment_search"
-        tools:layout="@layout/fragment_search" />
+        android:name="com.example.newsapp.ui.fragments.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" >
+        <argument
+            android:name="fromFragment"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_searchFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
 </navigation>

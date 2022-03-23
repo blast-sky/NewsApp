@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">NewsApp</string>
 
-    <string name="without_author">"Без автора"</string>
+    <string name="without_author">"No author"</string>
 
     <string name="daily_news_label">"Daily News"</string>
     <string name="settings_label">"Settings"</string>
@@ -21,5 +21,12 @@
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="search">Search</string>
+    <string name="retry">Retry</string>
+    <string name="load_error">Load Error</string>
+    <string name="top_stories">Top stories</string>
+    <string name="latest_it_news">Latest it news</string>
+    <string name="latest_bitcoin_news">Latest bitcoin news</string>
+    <string name="add_to_bookmarks">Add to bookmarks</string>
+    <string name="read_on_site">Read on site...</string>
 
 </resources>
