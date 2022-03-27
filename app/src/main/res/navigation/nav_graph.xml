@@ -8,8 +8,8 @@
     <fragment
         android:id="@+id/dailyNewsFragment"
         android:name="com.example.newsapp.ui.fragments.DailyNewsFragment"
-        android:label="Daily News"
-        tools:layout="@layout/fragment_daily_news" >
+        android:label="@string/daily_news_label"
+        tools:layout="@layout/fragment_daily_news">
         <action
             android:id="@+id/action_dailyNewsFragment_to_articleFragment"
             app:destination="@id/articleFragment" />
@@ -20,8 +20,8 @@
     <fragment
         android:id="@+id/bookmarksFragment"
         android:name="com.example.newsapp.ui.fragments.BookmarksFragment"
-        android:label="Bookmarks"
-        tools:layout="@layout/fragment_bookmarks" >
+        android:label="@string/bookmarks_label"
+        tools:layout="@layout/fragment_bookmarks">
         <action
             android:id="@+id/action_bookmarksFragment_to_articleFragment"
             app:destination="@id/articleFragment" />
@@ -29,7 +29,7 @@
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.newsapp.ui.fragments.SettingsFragment"
-        android:label="Settings" />
+        android:label="@string/settings_label" />
     <fragment
         android:id="@+id/articleFragment"
         android:name="com.example.newsapp.ui.fragments.ArticleFragment"
@@ -60,8 +60,8 @@
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.example.newsapp.ui.fragments.SearchFragment"
-        android:label="Search"
-        tools:layout="@layout/fragment_search" >
+        android:label="@string/search"
+        tools:layout="@layout/fragment_search">
         <argument
             android:name="fromFragment"
             app:argType="string" />

@@ -29,6 +29,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
+                    <androidx.constraintlayout.widget.Group
+                        android:id="@+id/topStoriesGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:constraint_referenced_ids="topStoriesLabel, topStoriesRecyclerView" />
+
                     <TextView
                         android:id="@+id/topStoriesLabel"
                         style="@style/DailyHeaderLabelStyle"
@@ -51,6 +57,12 @@
                         app:layout_constraintTop_toBottomOf="@id/topStoriesLabel"
                         tools:itemCount="1"
                         tools:listitem="@layout/horizontal_news_item" />
+
+                    <androidx.constraintlayout.widget.Group
+                        android:id="@+id/itGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:constraint_referenced_ids="latestItNewsLabel, latestItNewsRecyclerView" />
 
                     <TextView
                         android:id="@+id/latestItNewsLabel"
@@ -75,6 +87,12 @@
                         app:layout_constraintTop_toBottomOf="@id/latestItNewsLabel"
                         tools:itemCount="1"
                         tools:listitem="@layout/horizontal_news_item" />
+
+                    <androidx.constraintlayout.widget.Group
+                        android:id="@+id/bitcoinGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:constraint_referenced_ids="latestBitcoinNewsLabel, latestBitcoinNewsRecyclerView" />
 
                     <TextView
                         android:id="@+id/latestBitcoinNewsLabel"

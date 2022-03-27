@@ -6,27 +6,22 @@
     <string name="daily_news_label">"Daily News"</string>
     <string name="settings_label">"Settings"</string>
     <string name="bookmarks_label">"Bookmarks"</string>
-    <!-- Preference Titles -->
-    <string name="messages_header">Messages</string>
-    <string name="sync_header">Sync</string>
 
-    <!-- Messages Preferences -->
-    <string name="signature_title">Your signature</string>
-    <string name="reply_title">Default reply action</string>
-
-    <!-- Sync Preferences -->
-    <string name="sync_title">Sync email periodically</string>
-    <string name="attachment_title">Download incoming attachments</string>
-    <string name="attachment_summary_on">Automatically download attachments for incoming emails
-    </string>
-    <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="search">Search</string>
     <string name="retry">Retry</string>
     <string name="load_error">Load Error</string>
     <string name="top_stories">Top stories</string>
     <string name="latest_it_news">Latest it news</string>
     <string name="latest_bitcoin_news">Latest bitcoin news</string>
-    <string name="add_to_bookmarks">Add to bookmarks</string>
-    <string name="read_on_site">Read on site...</string>
 
+    <string name="add_to_bookmarks">Add to bookmarks</string>
+    <string name="read_on_site">Read on site…</string>
+
+    <string name="is_top_news_active" translatable="false">isTopNewsActive</string>
+    <string name="is_it_news_active" translatable="false">isItActive</string>
+    <string name="is_bitcoin_news_active" translatable="false">isBitcoinActive</string>
+
+    <string name="show_top_headlines">Show top-headlines news</string>
+    <string name="show_it_news">Show latest it news</string>
+    <string name="show_bitcoin_news">Show latest bitcoin news</string>
 </resources>

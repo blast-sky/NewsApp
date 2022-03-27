@@ -1,16 +1,19 @@
 package com.example.newsapp.di
 
 import android.app.Application
+import android.content.Context
 import com.example.newsapp.ui.fragments.ArticleFragment
 import com.example.newsapp.ui.fragments.BookmarksFragment
 import com.example.newsapp.ui.fragments.DailyNewsFragment
 import com.example.newsapp.ui.fragments.SearchFragment
+import dagger.Binds
 import dagger.BindsInstance
 import dagger.Component
+import dagger.Module
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [NetworkModule::class, DatabaseModule::class])
+@Component(modules = [ApplicationModule::class, NetworkModule::class, DatabaseModule::class])
 interface AppComponent {
 
     fun inject(fragment: DailyNewsFragment)
@@ -29,4 +32,11 @@ interface AppComponent {
 
         fun build(): AppComponent
     }
+}
+
+@Module
+abstract class ApplicationModule {
+
+    @Binds
+    abstract fun bindContext(application: Application): Context
 }

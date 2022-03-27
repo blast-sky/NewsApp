@@ -11,13 +11,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newsapp.R
+import com.example.newsapp.Settings
 import com.example.newsapp.adapters.PagingArticleAdapter
 import com.example.newsapp.adapters.withLoadStateAdapters
 import com.example.newsapp.appComponent
 import com.example.newsapp.ui.viewmodel.DailyNewsViewModel
 import com.example.newsapp.databinding.FragmentDailyNewsBinding
 import com.example.newsapp.ui.adapter.paging.NewsLoadStateAdapter
-import com.example.newsapp.ui.viewmodel.DatabaseViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -28,6 +28,14 @@ class DailyNewsFragment : Fragment() {
     lateinit var dnFactory: DailyNewsViewModel.Factory
     private val dailyNewsViewModel by viewModels<DailyNewsViewModel> { dnFactory }
 
+    @Inject
+    lateinit var settings: Settings
+
+    override fun onAttach(context: Context) {
+        context.appComponent().inject(this)
+        super.onAttach(context)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -35,11 +43,6 @@ class DailyNewsFragment : Fragment() {
         val binding = FragmentDailyNewsBinding.inflate(inflater, container, false)
         setHasOptionsMenu(true)
         return binding.root
-    }
-
-    override fun onAttach(context: Context) {
-        context.appComponent().inject(this)
-        super.onAttach(context)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -53,9 +56,20 @@ class DailyNewsFragment : Fragment() {
             binding.latestBitcoinNewsRecyclerView
         )
 
+        applyPreferences(binding)
         setupAdapters(adapters, recyclerViews)
         observeAdapters(adapters)
         setupSwipeLayout(adapters, recyclerViews, binding)
+    }
+
+    private fun applyPreferences(binding: FragmentDailyNewsBinding) {
+        binding.topStoriesGroup.visibility = boolToVisibility(settings.isTopHeadlinesActive())
+        binding.itGroup.visibility = boolToVisibility(settings.isItActive())
+        binding.bitcoinGroup.visibility = boolToVisibility(settings.isBitcoinActive())
+    }
+
+    private fun boolToVisibility(boolean: Boolean): Int {
+        return if (boolean) View.VISIBLE else View.GONE
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
