@@ -77,10 +77,11 @@ class ArticleFragment : Fragment() {
     private fun applyArticleToBinding(binding: FragmentArticleBinding) {
         val article = args.article
         binding.apply {
-            Picasso.get().load(article.urlToImage).into(articleImage)
+            if(article.urlToImage != "")
+                Picasso.get().load(article.urlToImage).into(articleImage)
             articleAuthor.text = article.source.name
-            val dateFormat = SimpleDateFormat("dd MMMM yyyy");
-            articleData.text = dateFormat.format(article.publishedAt);
+            val dateFormat = SimpleDateFormat("dd MMMM yyyy")
+            articleData.text = dateFormat.format(article.publishedAt)
             articleTitle.text = article.title
             articleDescription.text = article.description
             onSiteLabel.setOnClickListener {

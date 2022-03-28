@@ -1,4 +1,4 @@
-package com.example.newsapp.adapters
+package com.example.newsapp.ui.adapter.paging
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -9,11 +9,9 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewbinding.ViewBinding
 import com.example.newsapp.R
 import com.example.newsapp.databinding.HorizontalNewsItemBinding
 import com.example.newsapp.model.Article
-import com.example.newsapp.ui.adapter.paging.NewsLoadStateAdapter
 import com.squareup.picasso.Picasso
 import java.text.SimpleDateFormat
 
@@ -34,7 +32,7 @@ fun <T : Any, V : RecyclerView.ViewHolder> PagingDataAdapter<T, V>.withLoadState
 typealias OnItemClickListener = (Article) -> Unit
 
 class PagingArticleAdapter :
-    PagingDataAdapter<Article, PagingArticleAdapter.ViewHolder>(ArticleDiffCallback()) {
+    PagingDataAdapter<Article, PagingArticleAdapter.TopViewHolder>(ArticleDiffCallback()) {
 
     private var listener: OnItemClickListener? = null
 
@@ -42,28 +40,23 @@ class PagingArticleAdapter :
         this.listener = listener
     }
 
-    abstract class ViewHolder(
-        private val binding: ViewBinding
+    inner class TopViewHolder(
+        private val binding: HorizontalNewsItemBinding
     ) : RecyclerView.ViewHolder(binding.root) {
-        abstract fun setArticle(article: Article)
+
         fun setOnClickListener(listener: () -> Unit) {
             binding.root.setOnClickListener { listener.invoke() }
         }
-    }
-
-    inner class TopViewHolder(
-        private val binding: HorizontalNewsItemBinding
-    ) : ViewHolder(binding) {
 
         @SuppressLint("SimpleDateFormat")
-        override fun setArticle(article: Article) {
+        fun setArticle(article: Article) {
             with(binding) {
                 topStoriesAuthorLabel.text = article.source.name
                 topStoriesTitle.text = article.title
-                val dateFormat = SimpleDateFormat("dd MMMM yyyy");
-                val strDate = dateFormat.format(article.publishedAt);
+                val dateFormat = SimpleDateFormat("dd MMMM yyyy")
+                val strDate = dateFormat.format(article.publishedAt)
                 topStoriesDateLabel.text = strDate
-                if (article.urlToImage == null) {
+                if (article.urlToImage == null || article.urlToImage == "") {
                     topStoriesImageView.scaleType = ImageView.ScaleType.CENTER
                     topStoriesImageView.setImageResource(R.drawable.ic_image)
                 } else {
@@ -75,13 +68,13 @@ class PagingArticleAdapter :
         }
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: TopViewHolder, position: Int) {
         val item = getItem(position)!!
         holder.setArticle(item)
         holder.setOnClickListener { listener?.invoke(item) }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TopViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         return TopViewHolder(HorizontalNewsItemBinding.inflate(inflater, parent, false))
     }

@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.newsapp.adapters.OnItemClickListener
+import com.example.newsapp.ui.adapter.paging.OnItemClickListener
 import com.example.newsapp.databinding.VerticalNewsItemBinding
 import com.example.newsapp.model.Article
 

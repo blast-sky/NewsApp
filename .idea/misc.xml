@@ -14,10 +14,10 @@
         <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/daily_news_item.xml" value="0.264" />
         <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/daily_news_latest_news_item.xml" value="0.536" />
         <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/daily_news_top_stories_item.xml" value="0.4" />
-        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/fragment_article.xml" value="0.2056159420289855" />
+        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/fragment_article.xml" value="0.2" />
         <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/fragment_bookmarks.xml" value="0.12360688956433637" />
         <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/fragment_bottom_navigation_bar.xml" value="0.18070652173913043" />
-        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/fragment_daily_news.xml" value="0.264" />
+        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/fragment_daily_news.xml" value="0.12360688956433637" />
         <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/fragment_header.xml" value="0.19021739130434784" />
         <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/fragment_search.xml" value="0.21829710144927536" />
         <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/fragment_web_view.xml" value="0.21829710144927536" />
@@ -26,15 +26,13 @@
         <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/search_item.xml" value="0.4" />
         <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/search_recycler_item.xml" value="0.20969202898550723" />
         <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/vertical_news_item.xml" value="0.4" />
-        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.25025641025641027" />
         <entry key="..\:/$PROJECT_DIR$/app/src/main/res/menu/bottom_navigation_view.xml" value="0.25416666666666665" />
         <entry key="..\:/$PROJECT_DIR$/app/src/main/res/menu/search_dummy_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/$PROJECT_DIR$/app/src/main/res/menu/search_menu.xml" value="0.264" />
-        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/xml/root_preferences.xml" value="0.2128623188405797" />
-        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/fragment_article.xml" value="0.2" />
-        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/fragment_daily_news.xml" value="0.12360688956433637" />
-        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.25025641025641027" />
         <entry key="..\:/$PROJECT_DIR$/app/src/main/res/xml/root_preferences.xml" value="0.264" />
+        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/drawable/bottom_nav_selector.xml" value="0.14583333333333334" />
+        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" value="0.12360688956433637" />
       </map>
     </option>
   </component>

@@ -46,7 +46,6 @@ class SearchFragment : Fragment(), SearchView.OnQueryTextListener {
         val binding = FragmentSearchBinding.bind(view)
 
         val searchAdapter = SearchAdapter(listOf()).apply {
-
             setOnItemClickListener { article ->
                 findNavController().navigate(
                     R.id.action_searchFragment_to_articleFragment,

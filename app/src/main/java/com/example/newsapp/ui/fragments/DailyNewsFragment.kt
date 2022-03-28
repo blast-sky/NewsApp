@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newsapp.R
 import com.example.newsapp.Settings
-import com.example.newsapp.adapters.PagingArticleAdapter
-import com.example.newsapp.adapters.withLoadStateAdapters
+import com.example.newsapp.ui.adapter.paging.PagingArticleAdapter
+import com.example.newsapp.ui.adapter.paging.withLoadStateAdapters
 import com.example.newsapp.appComponent
 import com.example.newsapp.ui.viewmodel.DailyNewsViewModel
 import com.example.newsapp.databinding.FragmentDailyNewsBinding
@@ -31,22 +31,29 @@ class DailyNewsFragment : Fragment() {
     @Inject
     lateinit var settings: Settings
 
+    private var _binding: FragmentDailyNewsBinding? = null
+    private val binding: FragmentDailyNewsBinding get() = _binding!!
+
     override fun onAttach(context: Context) {
         context.appComponent().inject(this)
         super.onAttach(context)
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val binding = FragmentDailyNewsBinding.inflate(inflater, container, false)
+        _binding = FragmentDailyNewsBinding.inflate(inflater, container, false)
         setHasOptionsMenu(true)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val binding = FragmentDailyNewsBinding.bind(view)
         super.onViewCreated(binding.root, savedInstanceState)
 
         val adapters = List(3) { PagingArticleAdapter() }
@@ -56,13 +63,13 @@ class DailyNewsFragment : Fragment() {
             binding.latestBitcoinNewsRecyclerView
         )
 
-        applyPreferences(binding)
+        applyPreferences()
         setupAdapters(adapters, recyclerViews)
         observeAdapters(adapters)
-        setupSwipeLayout(adapters, recyclerViews, binding)
+        setupSwipeLayout(adapters, recyclerViews)
     }
 
-    private fun applyPreferences(binding: FragmentDailyNewsBinding) {
+    private fun applyPreferences() {
         binding.topStoriesGroup.visibility = boolToVisibility(settings.isTopHeadlinesActive())
         binding.itGroup.visibility = boolToVisibility(settings.isItActive())
         binding.bitcoinGroup.visibility = boolToVisibility(settings.isBitcoinActive())
@@ -86,8 +93,7 @@ class DailyNewsFragment : Fragment() {
 
     private fun setupSwipeLayout(
         adapters: List<PagingArticleAdapter>,
-        recyclerViews: List<RecyclerView>,
-        binding: FragmentDailyNewsBinding
+        recyclerViews: List<RecyclerView>
     ) {
         binding.swipeLayout.setOnRefreshListener {
             for (adapter in adapters)
@@ -122,7 +128,7 @@ class DailyNewsFragment : Fragment() {
         adapters: List<PagingArticleAdapter>,
         recyclerViews: List<RecyclerView>
     ) {
-        for (adapter in adapters) {
+        adapters.forEach { adapter ->
             adapter.setOnItemClickListener { article ->
                 findNavController().navigate(
                     R.id.action_dailyNewsFragment_to_articleFragment,

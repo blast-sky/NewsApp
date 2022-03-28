@@ -1,16 +1,11 @@
 package com.example.newsapp.ui.adapter
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.newsapp.R
-import com.example.newsapp.adapters.OnItemClickListener
+import com.example.newsapp.ui.adapter.paging.OnItemClickListener
 import com.example.newsapp.databinding.VerticalNewsItemBinding
 import com.example.newsapp.model.Article
-import com.squareup.picasso.Picasso
-import java.text.SimpleDateFormat
 
 class SearchAdapter(
     var articles: List<Article> = listOf()
