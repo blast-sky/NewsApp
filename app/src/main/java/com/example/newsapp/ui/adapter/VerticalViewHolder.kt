@@ -22,8 +22,8 @@ class VerticalViewHolder(
         with(binding) {
             newsAuthor.text = article.source.name
             newsTitle.text = article.title
-            val dateFormat = SimpleDateFormat("dd MMMM yyyy");
-            val strDate = dateFormat.format(article.publishedAt);
+            val dateFormat = SimpleDateFormat("dd MMMM yyyy")
+            val strDate = dateFormat.format(article.publishedAt)
             dateLabel.text = strDate
             if (article.urlToImage == null) {
                 newsImage.scaleType = ImageView.ScaleType.CENTER

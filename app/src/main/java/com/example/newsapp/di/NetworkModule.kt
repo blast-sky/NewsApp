@@ -13,7 +13,7 @@ private const val BASE_URL = "https://newsapi.org/"
 private const val API_KEY_HEADER = "X-Api-Key"
 
 @Module
-class NetworkModule() {
+class NetworkModule {
 
     @[Provides Singleton]
     fun provideOkHttpClient(@NewsApiQualifier apiKey: String): OkHttpClient {

@@ -20,5 +20,9 @@ data class Article(
         }
         return false
     }
+
+    override fun hashCode(): Int {
+        return url.hashCode()
+    }
 }
 

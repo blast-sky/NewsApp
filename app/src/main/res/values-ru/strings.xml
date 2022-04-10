@@ -20,4 +20,6 @@
     <string name="show_top_headlines">Показывать новости дня</string>
     <string name="show_it_news">Показывать последние новости it</string>
     <string name="show_bitcoin_news">Показывать последние новости про биткоин</string>
+    <string name="night_mode">Ночной режим</string>
+    <string name="visual">Оформление</string>
 </resources>

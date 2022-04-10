@@ -29,7 +29,7 @@ class SearchFragment : Fragment(), SearchView.OnQueryTextListener {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        context.appComponent().inject(this)
+        context.appComponent.inject(this)
     }
 
     override fun onCreateView(

@@ -1,11 +1,10 @@
+@file:Suppress("unused", "unused")
+
 package com.example.newsapp.di
 
 import android.app.Application
 import android.content.Context
-import com.example.newsapp.ui.fragments.ArticleFragment
-import com.example.newsapp.ui.fragments.BookmarksFragment
-import com.example.newsapp.ui.fragments.DailyNewsFragment
-import com.example.newsapp.ui.fragments.SearchFragment
+import com.example.newsapp.ui.fragments.*
 import dagger.Binds
 import dagger.BindsInstance
 import dagger.Component

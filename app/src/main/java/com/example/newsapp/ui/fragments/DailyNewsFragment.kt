@@ -11,13 +11,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newsapp.R
-import com.example.newsapp.Settings
-import com.example.newsapp.ui.adapter.paging.PagingArticleAdapter
-import com.example.newsapp.ui.adapter.paging.withLoadStateAdapters
 import com.example.newsapp.appComponent
-import com.example.newsapp.ui.viewmodel.DailyNewsViewModel
 import com.example.newsapp.databinding.FragmentDailyNewsBinding
 import com.example.newsapp.ui.adapter.paging.NewsLoadStateAdapter
+import com.example.newsapp.ui.adapter.paging.PagingArticleAdapter
+import com.example.newsapp.ui.adapter.paging.withLoadStateAdapters
+import com.example.newsapp.ui.settings
+import com.example.newsapp.ui.viewmodel.DailyNewsViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -28,14 +28,11 @@ class DailyNewsFragment : Fragment() {
     lateinit var dnFactory: DailyNewsViewModel.Factory
     private val dailyNewsViewModel by viewModels<DailyNewsViewModel> { dnFactory }
 
-    @Inject
-    lateinit var settings: Settings
-
     private var _binding: FragmentDailyNewsBinding? = null
     private val binding: FragmentDailyNewsBinding get() = _binding!!
 
     override fun onAttach(context: Context) {
-        context.appComponent().inject(this)
+        context.appComponent.inject(this)
         super.onAttach(context)
     }
 
@@ -70,9 +67,9 @@ class DailyNewsFragment : Fragment() {
     }
 
     private fun applyPreferences() {
-        binding.topStoriesGroup.visibility = boolToVisibility(settings.isTopHeadlinesActive())
-        binding.itGroup.visibility = boolToVisibility(settings.isItActive())
-        binding.bitcoinGroup.visibility = boolToVisibility(settings.isBitcoinActive())
+        binding.topStoriesGroup.visibility = boolToVisibility(context!!.settings.isTopHeadlinesActive())
+        binding.itGroup.visibility = boolToVisibility(context!!.settings.isItActive())
+        binding.bitcoinGroup.visibility = boolToVisibility(context!!.settings.isBitcoinActive())
     }
 
     private fun boolToVisibility(boolean: Boolean): Int {

@@ -15,9 +15,8 @@ class NewsApp : Application() {
     }
 }
 
-fun Context.appComponent(): AppComponent {
-    return when(this) {
+val Context.appComponent: AppComponent
+    get() = when (this) {
         is NewsApp -> appComponent
-        else -> applicationContext.appComponent()
+        else -> applicationContext.appComponent
     }
-}

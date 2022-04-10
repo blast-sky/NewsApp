@@ -7,12 +7,9 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.cachedIn
 import androidx.paging.liveData
-import com.example.newsapp.repository.DatabaseRepository
 import com.example.newsapp.model.Article
-import com.example.newsapp.ui.adapter.paging.NewsPagingSource
 import com.example.newsapp.repository.RetrofitRepository
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import com.example.newsapp.ui.adapter.paging.NewsPagingSource
 import javax.inject.Inject
 
 class DailyNewsViewModel(

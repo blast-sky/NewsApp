@@ -20,8 +20,11 @@
     <string name="is_top_news_active" translatable="false">isTopNewsActive</string>
     <string name="is_it_news_active" translatable="false">isItActive</string>
     <string name="is_bitcoin_news_active" translatable="false">isBitcoinActive</string>
+    <string name="is_night_mode" translatable="false">isNightMode</string>
 
     <string name="show_top_headlines">Show top-headlines news</string>
     <string name="show_it_news">Show latest it news</string>
     <string name="show_bitcoin_news">Show latest bitcoin news</string>
+    <string name="night_mode">Night mode</string>
+    <string name="visual">Visual</string>
 </resources>

@@ -4,13 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
+        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/drawable/bottom_nav_selector.xml" value="0.14583333333333334" />
         <entry key="..\:/$PROJECT_DIR$/app/src/main/res/drawable/divider_drawable.xml" value="0.2703125" />
         <entry key="..\:/$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_image_24.xml" value="0.2703125" />
         <entry key="..\:/$PROJECT_DIR$/app/src/main/res/drawable/ic_image.xml" value="0.2703125" />
         <entry key="..\:/$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
         <entry key="..\:/$PROJECT_DIR$/app/src/main/res/drawable/ic_search.xml" value="0.2703125" />
         <entry key="..\:/$PROJECT_DIR$/app/src/main/res/drawable/ic_settings.xml" value="0.2703125" />
-        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" value="0.23777173913043478" />
+        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" value="0.12360688956433637" />
         <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/daily_news_item.xml" value="0.264" />
         <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/daily_news_latest_news_item.xml" value="0.536" />
         <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/daily_news_top_stories_item.xml" value="0.4" />
@@ -31,8 +32,24 @@
         <entry key="..\:/$PROJECT_DIR$/app/src/main/res/menu/search_dummy_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/$PROJECT_DIR$/app/src/main/res/menu/search_menu.xml" value="0.264" />
         <entry key="..\:/$PROJECT_DIR$/app/src/main/res/xml/root_preferences.xml" value="0.264" />
-        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/drawable/bottom_nav_selector.xml" value="0.14583333333333334" />
-        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" value="0.12360688956433637" />
+        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
+        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/drawable/ic_search_light.xml" value="0.2703125" />
+        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/drawable/ic_search_night.xml" value="0.2703125" />
+        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/drawable/ic_settings.xml" value="0.2703125" />
+        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" value="0.16576086956521738" />
+        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/fragment_article.xml" value="0.4164408310749774" />
+        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/fragment_bookmarks.xml" value="0.16576086956521738" />
+        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/fragment_daily_news.xml" value="0.16576086956521738" />
+        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/fragment_search.xml" value="0.1911231884057971" />
+        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/fragment_web_view.xml" value="0.18659420289855072" />
+        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/horizontal_news_item.xml" value="0.18659420289855072" />
+        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/loadstate_viewholder.xml" value="0.16576086956521738" />
+        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/layout/vertical_news_item.xml" value="0.536" />
+        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/menu-night/search_dummy_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/menu/search_dummy_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/menu/search_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/$PROJECT_DIR$/app/src/main/res/xml/root_preferences.xml" value="0.4" />
       </map>
     </option>
   </component>

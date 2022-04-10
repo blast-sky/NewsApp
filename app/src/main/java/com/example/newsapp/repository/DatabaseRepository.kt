@@ -8,7 +8,6 @@ import com.example.newsapp.room.ArticleDbEntity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
-import java.lang.Exception
 import javax.inject.Inject
 
 class DatabaseRepository @Inject constructor(

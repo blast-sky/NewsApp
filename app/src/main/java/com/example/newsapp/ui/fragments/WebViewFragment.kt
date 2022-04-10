@@ -23,7 +23,6 @@ class WebViewFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val binding = FragmentWebViewBinding.inflate(inflater, container, false)
-
         return binding.root
     }
 
