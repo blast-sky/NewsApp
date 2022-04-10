@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">NewsApp</string>
+
+    <string name="without_author">"No author"</string>
+
+    <string name="daily_news_label">"Daily News"</string>
+    <string name="settings_label">"Settings"</string>
+    <string name="bookmarks_label">"Bookmarks"</string>
+
+    <string name="search">Search</string>
+    <string name="retry">Retry</string>
+    <string name="load_error">Load Error</string>
+    <string name="top_stories">Top stories</string>
+    <string name="latest_it_news">Latest it news</string>
+    <string name="latest_bitcoin_news">Latest bitcoin news</string>
+
+    <string name="add_to_bookmarks">Add to bookmarks</string>
+    <string name="read_on_site">Read on site…</string>
+
+    <string name="is_top_news_active" translatable="false">isTopNewsActive</string>
+    <string name="is_it_news_active" translatable="false">isItActive</string>
+    <string name="is_bitcoin_news_active" translatable="false">isBitcoinActive</string>
+    <string name="is_night_mode" translatable="false">isNightMode</string>
+
+    <string name="show_top_headlines">Show top-headlines news</string>
+    <string name="show_it_news">Show latest it news</string>
+    <string name="show_bitcoin_news">Show latest bitcoin news</string>
+    <string name="night_mode">Night mode</string>
+    <string name="visual">Visual</string>
 </resources>
