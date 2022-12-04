@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newsapp.ui.adapter.paging.OnItemClickListener
 import com.example.newsapp.databinding.VerticalNewsItemBinding
-import com.example.newsapp.model.Article
+import com.example.newsapp.domain.model.Article
 
 class BookmarksAdapter(
     private var articles: List<Article> = listOf()

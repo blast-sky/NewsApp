@@ -4,8 +4,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import com.example.newsapp.model.Article
-import com.example.newsapp.retrofit.NewsService
+import com.example.newsapp.domain.model.Article
+import com.example.newsapp.data.retrofit.NewsService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject

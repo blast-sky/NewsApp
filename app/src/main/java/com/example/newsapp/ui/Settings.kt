@@ -1,8 +1,8 @@
-package com.example.newsapp
+package com.example.newsapp.ui
 
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.PreferenceManager
-import com.example.newsapp.ui.MainActivity
+import com.example.newsapp.R
 
 class Settings constructor(activity: MainActivity) {
 

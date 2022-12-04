@@ -1,6 +1,6 @@
-package com.example.newsapp.repository
+package com.example.newsapp.domain.repository
 
-import com.example.newsapp.retrofit.NewsService
+import com.example.newsapp.data.retrofit.NewsService
 import javax.inject.Inject
 
 class RetrofitRepository @Inject constructor(

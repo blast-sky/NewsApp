@@ -7,8 +7,8 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.cachedIn
 import androidx.paging.liveData
-import com.example.newsapp.model.Article
-import com.example.newsapp.repository.RetrofitRepository
+import com.example.newsapp.domain.model.Article
+import com.example.newsapp.domain.repository.RetrofitRepository
 import com.example.newsapp.ui.adapter.paging.NewsPagingSource
 import javax.inject.Inject
 

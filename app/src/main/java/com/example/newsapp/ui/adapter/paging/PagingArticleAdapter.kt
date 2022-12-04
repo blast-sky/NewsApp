@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newsapp.R
 import com.example.newsapp.databinding.HorizontalNewsItemBinding
-import com.example.newsapp.model.Article
+import com.example.newsapp.domain.model.Article
 import com.squareup.picasso.Picasso
 import java.text.SimpleDateFormat
 

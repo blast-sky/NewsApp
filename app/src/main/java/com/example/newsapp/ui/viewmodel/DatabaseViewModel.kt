@@ -3,8 +3,8 @@ package com.example.newsapp.ui.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import com.example.newsapp.model.Article
-import com.example.newsapp.repository.DatabaseRepository
+import com.example.newsapp.domain.model.Article
+import com.example.newsapp.domain.repository.DatabaseRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject

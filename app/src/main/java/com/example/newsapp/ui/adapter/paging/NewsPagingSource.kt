@@ -1,7 +1,7 @@
 package com.example.newsapp.ui.adapter.paging
 
 import androidx.paging.*
-import com.example.newsapp.model.Article
+import com.example.newsapp.domain.model.Article
 import java.lang.Exception
 
 typealias ArticleLoader = suspend (page: Int, pageSize: Int) -> List<Article>

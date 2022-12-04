@@ -5,7 +5,7 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newsapp.R
 import com.example.newsapp.databinding.VerticalNewsItemBinding
-import com.example.newsapp.model.Article
+import com.example.newsapp.domain.model.Article
 import com.squareup.picasso.Picasso
 import java.text.SimpleDateFormat
 

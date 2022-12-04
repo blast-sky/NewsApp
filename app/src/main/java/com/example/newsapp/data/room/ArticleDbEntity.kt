@@ -1,8 +1,8 @@
-package com.example.newsapp.room
+package com.example.newsapp.data.room
 
 import androidx.room.*
-import com.example.newsapp.model.Article
-import com.example.newsapp.model.Source
+import com.example.newsapp.domain.model.Article
+import com.example.newsapp.domain.model.Source
 import java.util.*
 
 @[TypeConverters(DateConverter::class) Entity(

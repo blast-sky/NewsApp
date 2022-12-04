@@ -1,10 +1,10 @@
-package com.example.newsapp.repository
+package com.example.newsapp.domain.repository
 
 import androidx.lifecycle.asFlow
 import androidx.lifecycle.asLiveData
-import com.example.newsapp.model.Article
-import com.example.newsapp.room.ArticleDao
-import com.example.newsapp.room.ArticleDbEntity
+import com.example.newsapp.domain.model.Article
+import com.example.newsapp.data.room.ArticleDao
+import com.example.newsapp.data.room.ArticleDbEntity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map

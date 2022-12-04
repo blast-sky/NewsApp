@@ -1,6 +1,6 @@
 package com.example.newsapp.di
 
-import com.example.newsapp.retrofit.NewsService
+import com.example.newsapp.data.retrofit.NewsService
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient

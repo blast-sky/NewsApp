@@ -8,7 +8,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.newsapp.R
-import com.example.newsapp.Settings
+import com.example.newsapp.ui.Settings
 import com.example.newsapp.databinding.ActivityMainBinding
 import com.example.newsapp.ui.fragments.BookmarksFragment
 import com.example.newsapp.ui.fragments.DailyNewsFragment

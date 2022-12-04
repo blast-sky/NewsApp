@@ -2,8 +2,8 @@ package com.example.newsapp.di
 
 import android.app.Application
 import androidx.room.Room
-import com.example.newsapp.room.ArticleDao
-import com.example.newsapp.room.ArticleDatabase
+import com.example.newsapp.data.room.ArticleDao
+import com.example.newsapp.data.room.ArticleDatabase
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
